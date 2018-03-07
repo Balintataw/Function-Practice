@@ -58,8 +58,6 @@ function rovarspraket(str) {
     if (typeof str !== 'string') {
         return str.toString();
     }
-    arrayOfVowels = ['a', 'e', 'i', 'o', 'u'];
-    
     var result = str.split('').map(function(letter) {
         if (isVowel(letter)) {
             return letter;
