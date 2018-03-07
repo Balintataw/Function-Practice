@@ -59,18 +59,16 @@ function rovarspraket(str) {
         return str.toString();
     }
     arrayOfVowels = ['a', 'e', 'i', 'o', 'u'];
-    var arrayOfLetters = str.split('');
     
-    var result = arrayOfLetters.map(function(letter) {
-        if (arrayOfVowels.includes(letter.toLowerCase())) {
+    var result = str.split('').map(function(letter) {
+        if (isVowel(letter)) {
             return letter;
-        }else {   
+        } else {   
             return letter + 'o' + letter; 
         }
     })
     return result.join('');
 }
-
 console.assert(rovarspraket("a") === "a")
 console.assert(rovarspraket("b") === "bob")
 console.assert(rovarspraket("cat") === "cocatot")
